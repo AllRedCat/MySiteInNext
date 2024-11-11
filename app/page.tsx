@@ -50,27 +50,32 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-      <main className="flex flex-col gap-8 row-start-2 col-start-2 items-center sm:items-start">
-        <Image
-          src="/foto.jpg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          style={fotoStyle}
-          priority
-        />
-        <div>
-            Me chamo Gabriel
+
+      <main className="flex flex-col gap-8 row-start-2 col-start-2 justify-center items-center">
+
+        <div className="flex flex-col justify-center items-center w-full">
+          <Image
+            src="/foto.jpg"
+            alt="Next.js logo"
+            width={180}
+            height={38}
+            style={fotoStyle}
+            priority
+          />
+        </div>
+        <div className="flex flex-col w-3/4">
+          Desenvolvedor Full-Stack e Web Designer, apaixonado por tecnologia e inovação. <br></br>
+          Solicite um orçamento e veja como posso transformar sua ideia em um projeto de sucesso
         </div>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="/projetos"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read our docs
+            Veja meus projetos
           </a>
           <a
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
@@ -80,12 +85,13 @@ export default function Home() {
             Entre em contato
           </a>
         </div>
+
       </main>
+
       <footer className="row-start-3 col-start-2 flex gap-6 flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
           rel="noopener noreferrer"
         >
           <Image

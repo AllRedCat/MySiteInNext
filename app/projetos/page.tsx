@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import WindowSizeButton from '../components/handleClick'
 
 export default function Projetos() {
@@ -40,21 +40,26 @@ export default function Projetos() {
         <div
             // className="grid grid-rows-[20px_1fr_100px] grid-cols-[100px_1fr_20px] items-center justify-items-center
             //  min-h-screen p-8 pb-20 sm:pb-0 gap-2 sm:p-8 font-[family-name:var(--font-geist-sans)] text-foreground max-h-screen"
+            // className={
+            //     size === 'small' ? 'grid grid-rows-[80px_1fr_80px] grid-cols-[20px_1fr_20px] items-center justify-items-center ' +
+            //         'min-h-screen p-8 gap-2 sm:p-8 font-[family-name:var(--font-geist-sans)] text-foreground max-h-screen' :
+            //         size === 'medium' ? 'grid grid-rows-[20px_1fr_100px] grid-cols-[100px_1fr_20px] items-center justify-items-center' +
+            //             'min-h-screen p-8 pb-20 gap-2 sm:p-8 font-[family-name:var(--font-geist-sans)] text-foreground max-h-screen' :
+            //             'grid grid-rows-[20px_1fr_100px] grid-cols-[100px_1fr_20px] items-center justify-items-center' +
+            //             'min-h-screen p-8 pb-20 gap-2 sm:p-8 font-[family-name:var(--font-geist-sans)] text-foreground max-h-screen'
+            // }
             className={
-                size === 'small' ? 'grid grid-rows-[80px_1fr_80px] grid-cols-[20px_1fr_20px] items-center justify-items-center ' +
-                    'min-h-screen p-8 gap-2 sm:p-8 font-[family-name:var(--font-geist-sans)] text-foreground max-h-screen' :
-                size === 'medium' ? 'grid grid-rows-[20px_1fr_100px] grid-cols-[100px_1fr_20px] items-center justify-items-center' +
-                    'min-h-screen p-8 pb-20 gap-2 sm:p-8 font-[family-name:var(--font-geist-sans)] text-foreground max-h-screen' :
-                    'grid grid-rows-[20px_1fr_100px] grid-cols-[100px_1fr_20px] items-center justify-items-center' +
-                    'min-h-screen p-8 pb-20 gap-2 sm:p-8 font-[family-name:var(--font-geist-sans)] text-foreground max-h-screen'
+                size === 'small' ? 'grid grid-rows-[20px_1fr_100px] grid-cols-[10px_1fr_10px] items-center justify-items-center min-h-screen p-8 pb-20 gap-2 sm:p-8 font-[family-name:var(--font-geist-sans)] text-foreground max-h-screen' :
+                    size === 'medium' ? 'grid grid-rows-[20px_1fr_100px] grid-cols-[100px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-2 sm:p-8 font-[family-name:var(--font-geist-sans)] text-foreground' :
+                        'grid grid-rows-[20px_1fr_100px] grid-cols-[100px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-2 sm:p-8 font-[family-name:var(--font-geist-sans)] text-foreground'
             }
         >
             <header
                 // className="md:row-start-2 sm:row-start-1 md:col-start-1 sm:col-start-2 flex flex-col items-start justify-center gap-6"
                 className={
                     size === 'small' ? 'row-start-1 col-start-2 flex items-start justify-center gap-6' :
-                    size === 'medium' ? 'row-start-2 col-start-1 flex flex-col items-start justify-center gap-6' :
-                        'row-start-2 col-start-1 flex flex-col items-start justify-center gap-6'
+                        size === 'medium' ? 'row-start-2 col-start-1 flex flex-col items-start justify-center gap-6' :
+                            'row-start-2 col-start-1 flex flex-col items-start justify-center gap-6'
                 }
             >
                 <nav>
@@ -62,8 +67,8 @@ export default function Projetos() {
                         // className="flex flex-col gap-6"
                         className={
                             size === 'small' ? 'flex gap-6' :
-                            size === 'medium' ? 'flex flex-col gap-6' :
-                            'flex flex-col gap-6'
+                                size === 'medium' ? 'flex flex-col gap-6' :
+                                    'flex flex-col gap-6'
                         }
                     >
                         <li>
@@ -106,7 +111,14 @@ export default function Projetos() {
                 </nav>
             </header>
 
-            <main className="grid pl-20 pr-20 grid-flow-row sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 row-start-2 col-start-2 justify-center items-center overflow-y-scroll max-h-full">
+            <main
+                // className="grid pl-20 pr-20 grid-flow-row sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 row-start-2 col-start-2 justify-center items-center overflow-y-scroll max-h-full w-full"
+                className={
+                    size === 'small' ? 'grid pt-6 grid-flow-row grid-cols-1 gap-8 row-start-2 col-start-2 justify-center items-center overflow-y-scroll max-h-full w-full' :
+                        size === 'medium' ? 'grid pl-20 pr-20 grid-flow-row grid-cols-2 gap-8 row-start-2 col-start-2 justify-center items-center overflow-y-scroll max-h-full w-full' :
+                            'grid pl-20 pr-20 grid-flow-row grid-cols-3 gap-8 row-start-2 col-start-2 justify-center items-center overflow-y-scroll max-h-full w-full'
+                }
+            >
 
                 <div className="bg-red-600 self-center justify-self-center" style={card}>1</div>
                 <div className="bg-red-600 self-center justify-self-center" style={card}>2</div>
@@ -117,7 +129,7 @@ export default function Projetos() {
                 <div className="bg-red-600 self-center justify-self-center" style={card}>7</div>
                 <div className="bg-red-600 self-center justify-self-center" style={card}>8</div>
                 <div className="bg-red-600 self-center justify-self-center" style={card}>
-                    <WindowSizeButton />
+                    <WindowSizeButton/>
                 </div>
 
             </main>
